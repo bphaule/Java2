@@ -1,0 +1,12 @@
+id,name,author,detail,copyrightyear,isbn,country
+1,Book1,Ruby,"somethng to type",2001,4452898511,France
+2,"Java Intro",Charlie,Somenote,2017,458965-81,England
+3,"Second Edition",Someone,"Needs books",2001,54789856,France
+4,Third,Try,Auoj,2017,978-52625215,Canada
+5,"Books for Everyone","Charlie Smith","Lots of stuff for everyone",1978,125-85698,"United States"
+6,"Technical Knowledge","Nathan Knowledge","Great Help",2017,978-52625245,"United States"
+7,"Java for Everyone","Steven King","Try it for fun",2008,978-5265221,"United States"
+8,"Fun for Everyone","Little Girl","Just some fun stuff",2012,978-526851,"Great Britain"
+9,"Graceland University","Presz Escolar","All about Graceland University",2012,978-5268589,"United States"
+10,"Memorial Memories","Tom Smith","Things you cannot forget",2002,978-5265245,"United States"
+11,"How To","Arthur Anderson","How to Get everything",1999,978-52652214,"United States"
