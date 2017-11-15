@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -14,6 +15,8 @@ import edu.dmacc.spring.books.BooksDao;
 @Controller
 public class BooksController {
 		@Autowired BooksDao dao;
+		@Autowired BookService bookService;
+		
 		private static final String[ ] countries = { "United States", "Canada", "Great Britain", "Germany" };
 
 		@RequestMapping(value="/form")
@@ -51,12 +54,16 @@ public class BooksController {
 		//	System.out.println("viewAll 5");
 			return modelAndView;
 		}
-
 		
-		@Bean
-		public BooksDao dao(){
-			BooksDao bean = new BooksDao();
-			return bean;
+		@RequestMapping(value ="/checkin")
+		
+		
+		public ModelAndView checkin(@ModelAttribute("books")Books books)
+		{
+			ModelAndView modelAndView = new ModelAndView();
+			bookService.checkIn(books.getIsbn());
+			return modelAndView;
 		}
+		
 }
 

@@ -10,7 +10,7 @@
 </head>
 <body>
 <h2>Books - Add</h2>
-<mvc:form modelAttribute="books" action="result.mvc">
+<mvc:form modelAttribute="books" action="result.mvc" modelAttribute="books">
 	<table>
 	    <tr>
 	        <td><mvc:label path="name">Name</mvc:label></td>
