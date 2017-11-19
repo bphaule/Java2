@@ -10,7 +10,7 @@
 </head>
 <body>
 <h2>Books - Add</h2>
-<mvc:form modelAttribute="books" action="result.mvc" modelAttribute="books">
+<mvc:form modelAttribute="books" action="result.mvc">
 	<table>
 	    <tr>
 	        <td><mvc:label path="name">Name</mvc:label></td>
@@ -44,6 +44,7 @@
 	</table>  
 </mvc:form>
 <a href = "viewAll.mvc">View All Users</a>
+<a href = "checkPage.mvc">Check Book In</a>
 
 </body>
 </html>
