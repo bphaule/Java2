@@ -9,34 +9,30 @@
 <title>Spring MVC Form Handling</title>
 </head>
 <body>
-<h2>Books - Add</h2>
+<h2>Books Menu</h2>
 <mvc:form modelAttribute="books" action="result.mvc">
 	<table>
 	    <tr>
-	        <td><mvc:label path="name">Name</mvc:label></td>
-	        <td><mvc:input path="name" /></td>
+	        <td><mvc:label path="search">Name</mvc:label></td>
+	        <td><mvc:input path="search" /></td>
 	    </tr>
 	    <tr>
-	        <td><mvc:label path="author">Author</mvc:label></td>
-	        <td><mvc:input path="author" /></td>
+	        <td><mvc:label path="checkedin">Author</mvc:label></td>
+	        <td><mvc:input path="checkedin" /></td>
 	    </tr>
 	    <tr>
-	        <td><mvc:label path="detail">Detail</mvc:label></td>
-	        <td><mvc:textarea path="detail" /></td>
+	        <td><mvc:label path="maintenance">Detail</mvc:label></td>
+	        <td><mvc:textarea path="maintenance" /></td>
 	    </tr>
 		<tr>
-            <td><mvc:label path="copyrightyear">Copyright Year</mvc:label></td>
-            <td><mvc:input path="copyrightyear" /></td>
+            <td><mvc:label path="reports">Copyright Year</mvc:label></td>
+            <td><mvc:input path="reports" /></td>
         </tr>
         <tr>
-            <td><mvc:label path="isbn">ISBN</mvc:label></td>
-            <td><mvc:input path="isbn" /></td>
+            <td><mvc:label path="exit">ISBN</mvc:label></td>
+            <td><mvc:input path="exit" /></td>
         </tr>
-        <tr>
-            <td><mvc:label path="country">Country</mvc:label></td>
-            <td><mvc:select path="country" items="${countries}" /></td>
-        </tr>
-        <tr>
+         <tr>
 	        <td colspan="2">
                 <input type="submit" value="Submit" />
 	        </td>

@@ -12,10 +12,10 @@ public class BookService {
 	{
 		// Get the whole record from db
 		// You have to store it into a Books
-		Books checked = dao.getByISBN(isbn);
+		// uncomment Books checked = dao.getByISBN(isbn);
 		
-		checked.setBorrower(0);
+		// uncomment checked.setBorrower(0);
 		
-		dao.update(checked);
+		// uncomment dao.update(checked);
 	}
 }
