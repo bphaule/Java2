@@ -55,6 +55,17 @@ public class BooksController {
 			return modelAndView;
 		}
 		
+<<<<<<< HEAD
+=======
+		@RequestMapping(value = "/checkPage")
+		public ModelAndView checkPage() {
+			
+			ModelAndView modelAndView = new ModelAndView();
+			return modelAndView;
+			
+		}
+		
+>>>>>>> 740e918832b40d9f058e106332f8bfbc02ebac73
 		@RequestMapping(value ="/checkin")
 		public ModelAndView checkin(@ModelAttribute("books")Books books)
 		{

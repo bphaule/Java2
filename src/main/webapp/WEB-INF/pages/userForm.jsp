@@ -44,6 +44,7 @@
 	</table>  
 </mvc:form>
 <a href = "viewAll.mvc">View All Users</a>
+<a href = "checkPage.mvc">Check Book In</a>
 
 </body>
 </html>
