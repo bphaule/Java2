@@ -71,5 +71,21 @@ public class BooksController {
 			return modelAndView;
 		}
 		
+		@RequestMapping(value="/BookSearch")
+		public ModelAndView BookSearch()
+		{
+			ModelAndView modelAndView = new ModelAndView();
+			return modelAndView;
+		}
+		
+		@RequestMapping(value="/BookSearchResult")
+		public ModelAndView BookSearchResult()
+		{
+			ModelAndView mav = new ModelAndView();
+			
+			return mav;
+		}
+		
+		
 }
 
