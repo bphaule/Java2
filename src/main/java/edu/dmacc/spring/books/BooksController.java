@@ -19,6 +19,13 @@ public class BooksController {
 		
 		private static final String[ ] countries = { "United States", "Canada", "Great Britain", "Germany" };
 
+		@RequestMapping(value="/mainForm")
+		public ModelAndView mainForm(){
+			ModelAndView modelAndView = new ModelAndView( );
+			modelAndView.setViewName("mainForm");
+			return modelAndView;
+		}
+		
 		@RequestMapping(value="/form")
 		public ModelAndView user(){
 			ModelAndView modelAndView = new ModelAndView( );
@@ -71,5 +78,28 @@ public class BooksController {
 			return modelAndView;
 		}
 		
+		@RequestMapping(value="/addBook")
+		public ModelAndView addBook(){
+			ModelAndView modelAndView = new ModelAndView( );
+			modelAndView.setViewName("addBook");
+			return modelAndView;
+		}
+		
+		@RequestMapping(value="/modBook")
+		public ModelAndView modBook(){
+			ModelAndView modelAndView = new ModelAndView( );
+			modelAndView.setViewName("modBook");
+			return modelAndView;
+		}
+		
+		@RequestMapping(value="/delBook")
+		public ModelAndView delBook(){
+			ModelAndView modelAndView = new ModelAndView( );
+			modelAndView.setViewName("delBook");
+			return modelAndView;
+		}
+		
+		
+					
 }
 

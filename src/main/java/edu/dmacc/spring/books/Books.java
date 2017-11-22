@@ -18,10 +18,7 @@ public class Books {
 	private String copyrightyear;
 	private double isbn;
 	private String country;
-	//private double borrower;
-		
-
-	
+	private Borrower borrower;
 	
 	public int getId() {
 		return id;
@@ -67,11 +64,4 @@ public class Books {
 	public void setCountry(String country) {
 		this.country = country;
 	}
-	//public double getBorrower() {
-	//	return borrower;
-	//}
-	//public void setBorrower(double borrower) {
-	//	this.borrower = borrower;
-	//}
-	
-}
+	}

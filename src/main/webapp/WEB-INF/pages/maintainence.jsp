@@ -6,13 +6,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Spring MVC Form Handling</title>
+<title>Maintenance</title>
 </head>
 <body>
-<h2>Books Menu</h2>
+<h2>Maintenance</h2>
 	<ul>
-		<li><a href = "checkPage.mvc">Check Book In</a></li>
-		<li><a href = "viewAll.mvc">View All Users</a></li>
+		<li><a href = "addBook.mvc">Add a Book</a></li>
+		<li><a href = "modBook.mvc">Modify a Book/a></li>
+		<li><a href = "delBook.mvc">Delete a Book/a></li>
 	</ul>
+</body>
 </body>
 </html>
