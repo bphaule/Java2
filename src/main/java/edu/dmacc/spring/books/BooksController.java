@@ -71,5 +71,52 @@ public class BooksController {
 			return modelAndView;
 		}
 		
+		@RequestMapping(value = "/reportPage")
+		public ModelAndView reportPage() {
+			
+			ModelAndView modelAndView = new ModelAndView();
+			return modelAndView;
+			
+		}
+		
+		@RequestMapping(value = "/allBooks")
+		public ModelAndView allBooks() {
+			
+			ModelAndView modelAndView = new ModelAndView();
+			return modelAndView;
+			
+		}
+		
+		@RequestMapping(value = "/outBooks")
+		public ModelAndView outBooks() {
+			
+			ModelAndView modelAndView = new ModelAndView();
+			return modelAndView;
+			
+		}
+		
+		@RequestMapping(value = "/printBooks")
+		public ModelAndView printBooks() {
+			
+			ModelAndView modelAndView = new ModelAndView();
+			return modelAndView;
+			
+		}
+		@RequestMapping(value="/BookSearch")
+		public ModelAndView BookSearch()
+		{
+			ModelAndView modelAndView = new ModelAndView();
+			return modelAndView;
+		}
+		
+		@RequestMapping(value="/BookSearchResult")
+		public ModelAndView BookSearchResult()
+		{
+			ModelAndView mav = new ModelAndView();
+			
+			return mav;
+		}
+		
+	
 }
 
