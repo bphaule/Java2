@@ -13,23 +13,23 @@
 <mvc:form modelAttribute="books" action="result.mvc">
 	<table>
 	    <tr>
-	        <td><mvc:label path="search">Name</mvc:label></td>
+	        <td><mvc:label path="search">Search and Borrow</mvc:label></td>
 	        <td><mvc:input path="search" /></td>
 	    </tr>
 	    <tr>
-	        <td><mvc:label path="checkedin">Author</mvc:label></td>
+	        <td><mvc:label path="checkedin">Check Books Back In</mvc:label></td>
 	        <td><mvc:input path="checkedin" /></td>
 	    </tr>
 	    <tr>
-	        <td><mvc:label path="maintenance">Detail</mvc:label></td>
+	        <td><mvc:label path="maintenance">Maintainance</mvc:label></td>
 	        <td><mvc:textarea path="maintenance" /></td>
 	    </tr>
 		<tr>
-            <td><mvc:label path="reports">Copyright Year</mvc:label></td>
+            <td><mvc:label path="reports">Reports</mvc:label></td>
             <td><mvc:input path="reports" /></td>
         </tr>
         <tr>
-            <td><mvc:label path="exit">ISBN</mvc:label></td>
+            <td><mvc:label path="exit">Exit</mvc:label></td>
             <td><mvc:input path="exit" /></td>
         </tr>
          <tr>
@@ -40,6 +40,7 @@
 	</table>  
 </mvc:form>
 <a href = "viewAll.mvc">View All Users</a>
+<a href = "checkPage.mvc">Check Book In</a>
 
 </body>
 </html>
