@@ -39,13 +39,7 @@ public class BooksDao {
 	{
 		em.persist(book);
 	} 
-	
-	public void mainMenu()
-	{
-		
-	}
-	
-	      
+  
 	
 
 }
