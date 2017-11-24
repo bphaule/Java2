@@ -4,10 +4,10 @@
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<class>edu.dmacc.spring.books.Books</class>
 		<properties>
-			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+			<property name="javax.persistence.jdbc.driver" value="org.gjt.mm.mysql.Driver"/>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/books"/>
 			<property name="javax.persistence.jdbc.user" value="root"/>
-			<property name="javax.persistence.jdbc.password" value="MySQL1718"/>
+			<property name="javax.persistence.jdbc.password" value="@Bn400446mrr"/>
 		</properties>
 	</persistence-unit>
 </persistence>
