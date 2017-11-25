@@ -12,8 +12,8 @@
 
 <mvc:form modelAttribute="books" action="checkin.mvc">
 	<h1 style="text-align: center;">Check Books In</h1>
-	<label for="in">Enter Book Isbn</label>
-	<input type="text" name="in" id="in"/>
+	<mvc:label path="isbn">Enter Book ISBN:</mvc:label>
+	<mvc:input path="isbn"/>
 	<input type="submit" value="submit"/>
 </mvc:form>
 

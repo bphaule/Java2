@@ -10,9 +10,7 @@
 </head>
 <body>
 	
-	<h1 style="text-align: center;">Check Books In</h1>
-	<label for="in">Enter Book Isbn</label>
-	<input type="text" name="in" id="in"/>
+	<h1 style="text-align: center;">Book Successfully Updated</h1>
 	
 </body>
 </html>

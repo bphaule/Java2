@@ -16,9 +16,9 @@ public class Books {
 	private String author;
 	private String detail;
 	private String copyrightyear;
-	private double isbn;
+	private int isbn;
 	private String country;
-	private double borrower;
+	private String borrower;
 		
 	public int getId() {
 		return id;
@@ -52,10 +52,10 @@ public class Books {
 	public void setCopyrightyear(String copyrightyear) {
 		this.copyrightyear = copyrightyear;
 	}
-	public double getIsbn() {
+	public int getIsbn() {
 		return isbn;
 	}
-	public void setIsbn(double isbn) {
+	public void setIsbn(int isbn) {
 		this.isbn = isbn;
 	}
 	public String getCountry() {
@@ -64,10 +64,10 @@ public class Books {
 	public void setCountry(String country) {
 		this.country = country;
 	}
-	public double getBorrower() {
+	public String getBorrower() {
 		return borrower;
 	}
-	public void setBorrower(double borrower) {
+	public void setBorrower(String borrower) {
 		this.borrower = borrower;
 	}
 	

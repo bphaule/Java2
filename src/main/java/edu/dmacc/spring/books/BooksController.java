@@ -59,6 +59,7 @@ public class BooksController {
 		public ModelAndView checkPage() {
 			
 			ModelAndView modelAndView = new ModelAndView();
+			modelAndView.addObject("books", new Books( ));
 			return modelAndView;
 			
 		}

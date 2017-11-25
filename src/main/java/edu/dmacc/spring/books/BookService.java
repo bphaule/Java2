@@ -8,13 +8,13 @@ public class BookService {
 
 	@Autowired BooksDao dao;
 	
-	public void checkIn(double isbn)
+	public void checkIn(int isbn)
 	{
 		// Get the whole record from db
 		// You have to store it into a Books
 		Books checked = dao.getByISBN(isbn);
 		
-		checked.setBorrower(0);
+		checked.setBorrower("Available");
 		
 		dao.update(checked);
 	}
