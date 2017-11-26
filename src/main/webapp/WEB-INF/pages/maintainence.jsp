@@ -12,8 +12,8 @@
 <h2>Maintenance</h2>
 	<ul>
 		<li><a href = "addBook.mvc">Add a Book</a></li>
-		<li><a href = "modBook.mvc">Modify a Book/a></li>
-		<li><a href = "delBook.mvc">Delete a Book/a></li>
+		<li><a href = "modBook.mvc">Modify a Book</a></li>
+		<li><a href = "delBook.mvc">Delete a Book</a></li>
 	</ul>
 </body>
 </body>

@@ -1,13 +1,17 @@
-package edu.dmacc.spring.books;
+package edu.dmacc.spring.borrowers;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity 
 @Table(name="borrowers")
 public class Borrower {
+	
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int borrowerID;
 	private String firstname;
 	private String lastname;
@@ -19,6 +23,7 @@ public class Borrower {
 	private String city;
 	private String state;
 	private int zip;
+	
 	public int getBorrowerID() {
 		return borrowerID;
 	}
@@ -86,7 +91,4 @@ public class Borrower {
 		this.zip = zip;
 	}
 	
-	
-	
-
 }
