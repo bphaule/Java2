@@ -24,9 +24,9 @@
 	<div style="margin: 1% auto; border: medium solid black;">
 		
 		<nav style="margin: 0 auto; text-align: center;">
-			<a href="allBooks.mvc" title="View All Books" alt="View All Books">List Of All Library Books</a>
+			<a href="availableBooks.mvc" title="View Available Books" alt="View Available Books">List Of Available Library Books</a>
 			<a href="outBooks.mvc" title="View Checked Out Books" alt="View Checked Out Books">View Checked Out Books</a>
-			<a href="printBooks.mvc" title="Print List Of Books" alt="Print List Of Books">Print List Of Books</a>
+			<a href="printBooks.mvc" title="Print List Of Books" alt="Print A List Of All Books">Print List Of Books</a>
 		</nav>
 		
 	</div>

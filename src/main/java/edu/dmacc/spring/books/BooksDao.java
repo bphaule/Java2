@@ -40,6 +40,19 @@ public class BooksDao {
 		em.getTransaction().begin();
 		em.persist(book);
 		em.getTransaction().commit();
-	} 
+	}
 	
+	public List<Books> getOutBooks() {
+		String q = "select u from Books u WHERE u.borrower = \"NotAvailable\"";
+		TypedQuery<Books> typedQuery = em.createQuery(q, Books.class);
+		List<Books> all = typedQuery.getResultList();
+		return all;
+	}
+	
+	public List<Books> getAvailableBooks() {
+		String q = "select u from Books u WHERE u.borrower = \"Available\"";
+		TypedQuery<Books> typedQuery = em.createQuery(q, Books.class);
+		List<Books> all = typedQuery.getResultList();
+		return all;
+	}
 }

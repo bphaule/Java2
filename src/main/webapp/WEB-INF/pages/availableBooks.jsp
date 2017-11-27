@@ -7,11 +7,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Checked Out Books</title>
+<title>Available Library Books</title>
 </head>
 <body>
 	
-	<h1 style="text-align: center;">List Of Checked Out Books</h1>
+	<h1 style="text-align: center;">List Of All Available Books In The Library</h1>
 	
 	<c:forEach items="${all}" var="item">
 		<table>
