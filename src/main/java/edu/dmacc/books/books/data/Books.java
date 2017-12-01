@@ -1,10 +1,18 @@
 package edu.dmacc.books.books.data;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+
+import edu.dmacc.books.borrower.data.Borrower;
 
 @Entity
 @Table(name="books")
@@ -19,6 +27,12 @@ public class Books {
 	private double isbn;
 	private String country;
 	private int available;
+	
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "borrowerbooks",
+    	joinColumns = @JoinColumn(name = "BookID", referencedColumnName = "id"),
+    	inverseJoinColumns = @JoinColumn(name = "BorrowerID", referencedColumnName = "id"))
+    private List<Borrower> borrowers;
 	
 	public int getAvailable() {
 		return available;
@@ -69,5 +83,11 @@ public class Books {
 	}
 	public void setCountry(String country) {
 		this.country = country;
+	}
+	public List<Borrower> getBorrowers() {
+		return borrowers;
+	}
+	public void setBorrowers(List<Borrower> borrowers) {
+		this.borrowers = borrowers;
 	}
 	}

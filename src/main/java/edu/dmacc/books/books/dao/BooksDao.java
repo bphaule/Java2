@@ -46,6 +46,10 @@ public class BooksDao {
 	public void update(Books book) 
 	{
 		em.persist(book);
+	}
+
+	public void save(Books bookToUpdate) {
+		em.persist(bookToUpdate);	    
 	} 
   
 	

@@ -1,8 +1,13 @@
 package edu.dmacc.books.borrower.data;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+
+import edu.dmacc.books.books.data.Books;
 
 @Entity 
 @Table(name="borrowers")
@@ -19,6 +24,10 @@ public class Borrower {
 	private String city;
 	private String state;
 	private int zip;
+
+    @ManyToMany(mappedBy = "borrowers")
+	private List<Books> books;
+	
 	public int getBorrowerID() {
 		return borrowerID;
 	}
@@ -84,6 +93,12 @@ public class Borrower {
 	}
 	public void setZip(int zip) {
 		this.zip = zip;
+	}
+	public List<Books> getBooks() {
+		return books;
+	}
+	public void setBooks(List<Books> books) {
+		this.books = books;
 	}
 	
 	
