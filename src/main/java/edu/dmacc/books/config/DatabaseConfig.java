@@ -50,9 +50,9 @@ public class DatabaseConfig {
 	   public DataSource dataSource(){
 	      DriverManagerDataSource dataSource = new DriverManagerDataSource();
 	      dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-	      dataSource.setUrl("jdbc:mysql://localhost:3306/books");
-	      dataSource.setUsername( "root" );
-	      dataSource.setPassword( "MySql1718" );
+	      dataSource.setUrl("jdbc:mysql://mysql.us.cloudlogin.co:3306/hydroplane72_bok");
+	      dataSource.setUsername( "hydroplane72_bok" );
+	      dataSource.setPassword( "Java2Pass" );
 	      return dataSource;
 	   }
 	   
