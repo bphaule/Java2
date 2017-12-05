@@ -5,31 +5,29 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedStoredProcedureQuery;
+import javax.persistence.ParameterMode;
+import javax.persistence.StoredProcedureParameter;
 import javax.persistence.Table;
+
 
 @Entity
 @Table(name="books")
 /*
  * Add the procedure for searching the books
+ * Citation: https://www.thoughts-on-java.org/call-stored-procedures-jpa/
  */
-//@NamedStoredProcedureQuery()
-/*@NamedStoredProcedureQuery(
-
-		name = "calculate", 
-
-		procedureName = "calculate", 
-
-		parameters = { 
-
-			@StoredProcedureParameter(mode = ParameterMode.IN, type = Double.class, name = "x"), 
-
-			@StoredProcedureParameter(mode = ParameterMode.IN, type = Double.class, name = "y"), 
-
-			@StoredProcedureParameter(mode = ParameterMode.OUT, type = Double.class, name = "sum")
-
+@NamedStoredProcedureQuery(
+		name = "SearchBooks",
+		procedureName = "SearchBooks",
+		resultClasses = Books.class,
+		parameters = {
+				//In params
+				@StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "searchType"),
+				@StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "searchText"),			
+				@StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "searchNum")
 		}
+		)
 
-	)*/
 public class Books {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)

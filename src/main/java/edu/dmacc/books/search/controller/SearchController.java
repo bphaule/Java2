@@ -1,17 +1,22 @@
 package edu.dmacc.books.search.controller;
 
+import java.util.ArrayList;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.context.request.WebRequest;
+
 import org.springframework.web.servlet.ModelAndView;
 
+import edu.dmacc.books.books.data.Books;
 import edu.dmacc.books.search.searchForm.SearchForm;
+import edu.dmacc.books.search.service.SearchService;
 @Controller
 public class SearchController {
-
+	@Autowired SearchService searchService;
 	//=============
 	// SearchPages
 	//=============
@@ -29,7 +34,9 @@ public class SearchController {
 			BindingResult result)
 	{
 		ModelAndView mav = new ModelAndView();
-		
+		//search for books
+		ArrayList<Books> bookList = searchService.getBook(searchForm.getSearchText(), searchForm.getSearchType());
+		mav.addObject("bookList", bookList);
 		mav.setViewName("SearchPages/BookSearchResult");
 		return mav;
 	}
