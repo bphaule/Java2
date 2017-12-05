@@ -1,6 +1,7 @@
 package edu.dmacc.books.search.controller;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -35,7 +36,7 @@ public class SearchController {
 	{
 		ModelAndView mav = new ModelAndView();
 		//search for books
-		ArrayList<Books> bookList = searchService.getBook(searchForm.getSearchText(), searchForm.getSearchType());
+		List<Books> bookList = searchService.getBook(searchForm.getSearchText(), searchForm.getSearchType());
 		mav.addObject("bookList", bookList);
 		mav.setViewName("SearchPages/BookSearchResult");
 		return mav;

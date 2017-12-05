@@ -34,4 +34,11 @@ public class SearchDao {
 		em.createStoredProcedureQuery(isbn);
 		return null;
 	}
+	/**
+	 * @return the entity manager
+	 */
+	public EntityManager getEm() {
+		return em;
+	}
+	
 }
