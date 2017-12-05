@@ -12,7 +12,7 @@ import javax.persistence.Table;
 /*
  * Add the procedure for searching the books
  */
-@NamedStoredProcedureQuery()
+//@NamedStoredProcedureQuery()
 /*@NamedStoredProcedureQuery(
 
 		name = "calculate", 
