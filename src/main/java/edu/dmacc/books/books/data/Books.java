@@ -16,16 +16,9 @@ public class Books {
 	private String author;
 	private String detail;
 	private String copyrightyear;
-	private double isbn;
+	private String isbn;
 	private String country;
-	private int available;
 	
-	public int getAvailable() {
-		return available;
-	}
-	public void setAvailable(int available) {
-		this.available = available;
-	}
 	public int getId() {
 		return id;
 	}
@@ -58,10 +51,10 @@ public class Books {
 	public void setCopyrightyear(String copyrightyear) {
 		this.copyrightyear = copyrightyear;
 	}
-	public double getIsbn() {
+	public String getIsbn() {
 		return isbn;
 	}
-	public void setIsbn(double isbn) {
+	public void setIsbn(String isbn) {
 		this.isbn = isbn;
 	}
 	public String getCountry() {

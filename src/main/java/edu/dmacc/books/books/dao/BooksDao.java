@@ -34,7 +34,25 @@ public class BooksDao {
 		String q = "select u from Books u WHERE isbn =: isbn";
 		TypedQuery<Books> typedQuery = em.createQuery(q, Books.class);
 	    return typedQuery.setParameter("isbn", ISBN).getSingleResult();
-	 }
+	}
+	
+	public List<Books> getOutBooks(){
+		
+		String q = "select u from Books u where u.borrower = " + 0;
+		TypedQuery<Books> typedQuery = em.createQuery(q, Books.class);
+		List<Books> outBooks = typedQuery.getResultList();
+		return outBooks;
+		
+	}
+	
+	public List<Books> getAvailableBooks(){
+		
+		String q = "select u from Books u where u.borrower = " + 1;
+		TypedQuery<Books> typedQuery = em.createQuery(q, Books.class);
+		List<Books> availableBooks = typedQuery.getResultList();
+		return availableBooks;
+		
+	}
 
 	public Books getById(int ID)
 	{
@@ -46,6 +64,7 @@ public class BooksDao {
 	public void update(Books book) 
 	{
 		em.persist(book);
+		em.getTransaction().commit();
 	} 
   
 	

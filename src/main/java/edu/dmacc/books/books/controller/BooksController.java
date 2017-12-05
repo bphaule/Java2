@@ -15,10 +15,10 @@ public class BooksController {
 		
 		private static final String[ ] countries = { "United States", "Canada", "Great Britain", "Germany" };
 
-		@RequestMapping(value="/MainForm")
+		@RequestMapping(value="/mainForm")
 		public ModelAndView mainForm(){
 			ModelAndView modelAndView = new ModelAndView( );
-			modelAndView.setViewName("MainForm");
+			modelAndView.setViewName("mainForm");
 			return modelAndView;
 		}
 		
