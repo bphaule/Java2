@@ -4,10 +4,32 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedStoredProcedureQuery;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="books")
+/*
+ * Add the procedure for searching the books
+ */
+@NamedStoredProcedureQuery()
+/*@NamedStoredProcedureQuery(
+
+		name = "calculate", 
+
+		procedureName = "calculate", 
+
+		parameters = { 
+
+			@StoredProcedureParameter(mode = ParameterMode.IN, type = Double.class, name = "x"), 
+
+			@StoredProcedureParameter(mode = ParameterMode.IN, type = Double.class, name = "y"), 
+
+			@StoredProcedureParameter(mode = ParameterMode.OUT, type = Double.class, name = "sum")
+
+		}
+
+	)*/
 public class Books {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)

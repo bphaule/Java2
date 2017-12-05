@@ -8,6 +8,7 @@ import edu.dmacc.books.config.AppConfig;
 public class BooksApplication {
 
 	public static void main(String[] args) {
+		@SuppressWarnings({ "unused", "resource" })
 		ApplicationContext context2 = new AnnotationConfigApplicationContext(AppConfig.class);
 	}
 }

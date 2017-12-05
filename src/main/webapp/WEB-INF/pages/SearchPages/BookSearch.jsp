@@ -19,6 +19,12 @@
 		<h3>Search by: </h3>
 		<!-- Radio button help comes from: http://www.java2s.com/Code/Java/JSP/SubmittingRadioButtons.htm -->
 		<FORM ACTION="BookSearchResult.mvc" METHOD="post">
+             <!--
+             	1 = Title
+             	2 = Author
+             	3 = ISBN
+             	4 = Copyright year
+              -->
              <INPUT TYPE="radio" NAME="searchType" VALUE="1" CHECKED>
              Title
             <BR>

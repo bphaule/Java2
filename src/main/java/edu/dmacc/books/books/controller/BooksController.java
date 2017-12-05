@@ -18,7 +18,7 @@ public class BooksController {
 		@RequestMapping(value="/MainForm")
 		public ModelAndView mainForm(){
 			ModelAndView modelAndView = new ModelAndView( );
-			modelAndView.setViewName("MainForm");
+			modelAndView.setViewName("mainForm");
 			return modelAndView;
 		}
 		
@@ -32,13 +32,16 @@ public class BooksController {
 			modelAndView.setViewName("BookPages/Books");
 			return modelAndView;
 		}
+		
+		/*
 		// Add Books
-		//@RequestMapping(value="/BookAdd")
-		//public ModelAndView BookAdd(){
-		//	ModelAndView modelAndView = new ModelAndView( );
-		//	modelAndView.setViewName("BookAdd");
-		//	return modelAndView;
-		//}
+		@RequestMapping(value="/BookAdd")
+		public ModelAndView BookAdd(){
+			ModelAndView modelAndView = new ModelAndView( );
+			modelAndView.setViewName("BookAdd");
+			return modelAndView;
+		}
+		*/
 		
 		@RequestMapping(value="/BookAdd")
 		public ModelAndView user(){
