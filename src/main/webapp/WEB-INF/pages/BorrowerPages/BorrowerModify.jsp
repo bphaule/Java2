@@ -7,6 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Borrower Maintenance</title>
+<link href="../layout.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <h2>Borrower - Modify</h2>

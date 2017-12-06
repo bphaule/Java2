@@ -8,6 +8,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>All Books</title>
+<link href="../layout.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 	<c:forEach items="${all}" var="item">
