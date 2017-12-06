@@ -38,11 +38,20 @@ public class SearchService {
 			
 		return results;
 	}
-	/*
-	public ArrayList<Books> SearchBooks(int searchText, int searchType)
+	
+	public List<Books> SearchBooks(int searchNum, int searchType)
 	{
+		System.out.println("In Search Books Num");
+		StoredProcedureQuery query  = dao.getEm().createNamedStoredProcedureQuery("SearchBooks");
+		query.setParameter("searchType", searchType);
+		query.setParameter("searchText", "");
+		query.setParameter("searchNum", searchNum);
 		
-	}*/
+		@SuppressWarnings("unchecked")
+		List<Books> results = query.getResultList();
+		
+	return results;
+	}
 	/*
 	 * 1 = Title
              	2 = Author
@@ -73,7 +82,7 @@ public class SearchService {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			//bookList =SearchBooks(searchNum, searchType);
+			bookList =SearchBooks(searchNum, searchType);
 		}
 		
 		return bookList;
