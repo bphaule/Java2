@@ -2,7 +2,7 @@
     pageEncoding="ISO-8859-1"%>
    <%@ taglib uri = "http://www.springframework.org/tags/form" prefix="mvc" %>
    <%@ page isELIgnored="false" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -17,9 +17,6 @@
 	}
 	
 </style>
-
-<link href="../layout.css" rel="stylesheet" type="text/css"/>
-
 </head>
 <body>
 	
@@ -29,7 +26,7 @@
 		<nav style="margin: 0 auto; text-align: center;">
 			<a href="ReportAll.mvc" title="View All Books" alt="View All Books">List Of All Library Books</a>
 			<a href="ReportOut.mvc" title="View Checked Out Books" alt="View Checked Out Books">View Checked Out Books</a>
-			<a href="ReportPrint.mvc" title="View Available Books" alt="View Available Books">View Available Books</a>
+			<a href="ReportPrint.mvc" title="Print List Of Books" alt="Print List Of Books">Print List Of Books</a>
 		</nav>
 		
 	</div>

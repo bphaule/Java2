@@ -2,12 +2,12 @@
     pageEncoding="ISO-8859-1"%>
     <%@ taglib uri = "http://www.springframework.org/tags/form" prefix="mvc" %>
    <%@ page isELIgnored="false" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Search Books</title>
-<link href="../layout.css" rel="stylesheet" type="text/css"/>
+
 </head>
 <body>
 <div class="container" style="">
@@ -19,6 +19,12 @@
 		<h3>Search by: </h3>
 		<!-- Radio button help comes from: http://www.java2s.com/Code/Java/JSP/SubmittingRadioButtons.htm -->
 		<FORM ACTION="BookSearchResult.mvc" METHOD="post">
+             <!--
+             	1 = Title
+             	2 = Author
+             	3 = ISBN
+             	4 = Copyright year
+              -->
              <INPUT TYPE="radio" NAME="searchType" VALUE="1" CHECKED>
              Title
             <BR>
