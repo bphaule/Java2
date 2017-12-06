@@ -8,11 +8,9 @@ import java.util.List;
 
 import javax.persistence.StoredProcedureQuery;
 
-import org.eclipse.persistence.internal.libraries.asm.tree.TryCatchBlockNode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import edu.dmacc.books.books.dao.BooksDao;
 import edu.dmacc.books.books.data.Books;
 import edu.dmacc.books.search.dao.SearchDao;
 
