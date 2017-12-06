@@ -7,7 +7,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Check Books Out</title>
-<link href="../layout.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 

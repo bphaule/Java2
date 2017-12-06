@@ -38,7 +38,14 @@ public class Books {
 	private String copyrightyear;
 	private String isbn;
 	private String country;
+	private int available;
 	
+	public int getAvailable() {
+		return available;
+	}
+	public void setAvailable(int available) {
+		this.available = available;
+	}
 	public int getId() {
 		return id;
 	}

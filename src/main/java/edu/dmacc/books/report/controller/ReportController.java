@@ -1,11 +1,25 @@
 package edu.dmacc.books.report.controller;
 
+<<<<<<< HEAD
+=======
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+>>>>>>> master
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+<<<<<<< HEAD
+=======
+import edu.dmacc.books.books.dao.BooksDao;
+import edu.dmacc.books.books.data.Books;
+import edu.dmacc.books.books.service.BookService;
+
+>>>>>>> master
 @Controller
 public class ReportController {
+	
 		//=============
 		// ReportPages
 		//=============
@@ -22,6 +36,8 @@ public class ReportController {
 		////	System.out.println("viewAll 5");
 		//	return modelAndView;
 		//}
+		@Autowired BookService bookService;
+		
 		@RequestMapping(value = "/ReportPage")
 		public ModelAndView reportPage() {
 			
@@ -33,7 +49,9 @@ public class ReportController {
 		@RequestMapping(value = "/ReportAll")
 		public ModelAndView reportAll() {
 			ModelAndView modelAndView = new ModelAndView();
+			List<Books> allBooks = bookService.getAllBooks();
 			modelAndView.setViewName("ReportPages/ReportAll");
+			modelAndView.addObject("all", allBooks);
 			return modelAndView;
 		}
 		
@@ -41,16 +59,20 @@ public class ReportController {
 		public ModelAndView reportOut() {
 			
 			ModelAndView modelAndView = new ModelAndView();
+			List<Books> outBooks = bookService.getOutBooks();
 			modelAndView.setViewName("ReportPages/ReportOut");
+			modelAndView.addObject("all", outBooks);
 			return modelAndView;
 			
 		}
 		
-		@RequestMapping(value = "/ReportPrintBooks")
+		@RequestMapping(value = "/ReportPrint")
 		public ModelAndView reportPrint() {
 			
 			ModelAndView modelAndView = new ModelAndView();
+			List<Books> availableBooks = bookService.getAvailableBooks();
 			modelAndView.setViewName("ReportPages/ReportPrint");
+			modelAndView.addObject("all", availableBooks);
 			return modelAndView;
 			
 		}

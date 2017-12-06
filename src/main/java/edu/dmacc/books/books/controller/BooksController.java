@@ -15,7 +15,7 @@ public class BooksController {
 		
 		private static final String[ ] countries = { "United States", "Canada", "Great Britain", "Germany" };
 
-		@RequestMapping(value="/mainForm")
+		@RequestMapping(value="/MainForm")
 		public ModelAndView mainForm(){
 			ModelAndView modelAndView = new ModelAndView( );
 			modelAndView.setViewName("mainForm");
@@ -97,7 +97,7 @@ public class BooksController {
 		{
 			ModelAndView modelAndView = new ModelAndView();
 			modelAndView.setViewName("CheckPages/CheckIn");
-			bookService.checkIn(books.getIsbn());
+			//bookService.checkIn(books.getIsbn());
 			return modelAndView;
 		}
 }

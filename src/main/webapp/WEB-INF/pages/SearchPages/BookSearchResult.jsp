@@ -20,7 +20,6 @@ td, th {
     padding: 8px;
 }
 </style>
-<link href="../layout.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 
