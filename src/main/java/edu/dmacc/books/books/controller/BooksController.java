@@ -8,6 +8,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import edu.dmacc.books.books.data.Books;
 import edu.dmacc.books.books.service.BookService;
+import edu.dmacc.books.borrowedbooks.BorrowedBooks;
 
 @Controller
 public class BooksController {
@@ -15,7 +16,7 @@ public class BooksController {
 		
 		private static final String[ ] countries = { "United States", "Canada", "Great Britain", "Germany" };
 
-		@RequestMapping(value="/MainForm")
+		@RequestMapping(value="/mainForm")
 		public ModelAndView mainForm(){
 			ModelAndView modelAndView = new ModelAndView( );
 			modelAndView.setViewName("mainForm");
@@ -93,11 +94,24 @@ public class BooksController {
 		}
 		
 		@RequestMapping(value ="/CheckIn")
-		public ModelAndView checkIn(@ModelAttribute("books")Books books)
+		public ModelAndView checkIn()
 		{
 			ModelAndView modelAndView = new ModelAndView();
 			modelAndView.setViewName("CheckPages/CheckIn");
-			//bookService.checkIn(books.getIsbn());
 			return modelAndView;
 		}
+		
+		@RequestMapping(value = "/CheckInResult")
+		public ModelAndView checkInResult(@ModelAttribute("BorrowedBooks")BorrowedBooks borrowedBook) {
+			
+			ModelAndView modelAndView = new ModelAndView();
+			modelAndView.setViewName("CheckPages/CheckInResult");
+			int brID = borrowedBook.getBorrowerID();
+			int bID = borrowedBook.getBookID();
+			bookService.checkIn(brID, bID);
+			return modelAndView;
+			
+		}
+		
+		//@ModelAttribute("books")Books books
 }

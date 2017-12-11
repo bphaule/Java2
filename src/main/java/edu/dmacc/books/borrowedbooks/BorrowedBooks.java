@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.eclipse.persistence.jpa.jpql.parser.DateTime;
+
 
 /**
  * @author MatthewsLaptop
@@ -19,11 +21,11 @@ import javax.persistence.Table;
 public class BorrowedBooks {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
+	private int idBorrowedBooks;
 	private int bookID;
 	private int borrowerID;
-//	private DateTime checkedOut;
-//	private DateTime checkedIn;
+	private int checkedOut;
+	private int checkedIn;
 	
 	
 	/**
@@ -42,7 +44,7 @@ public class BorrowedBooks {
 	 * @param checkedOut
 	 */
 	public BorrowedBooks(int id, int bookID, int borrowerID) {
-		this.id = id;
+		this.idBorrowedBooks = id;
 		this.bookID = bookID;
 		this.borrowerID = borrowerID;
 //		this.checkedOut = checkedOut;
@@ -58,13 +60,13 @@ public class BorrowedBooks {
  * @return the id
 	 */
 	public int getId() {
-		return id;
+		return idBorrowedBooks;
 	}
 	/**
 	 * @param id the id to set
 	 */
 	public void setId(int id) {
-		this.id = id;
+		this.idBorrowedBooks = id;
 	}
 	/**
 	 * @return the bookID
@@ -90,29 +92,29 @@ public class BorrowedBooks {
 	public void setBorrowerID(int borrowerID) {
 		this.borrowerID = borrowerID;
 	}
-//	/**
+	/**
 //	 * @return the checkedOut
 //	 */
-//	public DateTime getCheckedOut() {
-//		return checkedOut;
-//	}
-//	/**
+	public int getCheckedOut() {
+		return checkedOut;
+	}
+	/**
 //	 * @param checkedOut the checkedOut to set
 //	 */
-//	public void setCheckedOut(DateTime checkedOut) {
-//		this.checkedOut = checkedOut;
-//	}
-//	/**
+	public void setCheckedOut(int checkedOut) {
+		this.checkedOut = checkedOut;
+	}
+	/**
 //	 * @return the checkedIn
 //	 */
-//	public DateTime getCheckedIn() {
-//		return checkedIn;
-//	}
-//	/**
+	public int getCheckedIn() {
+		return checkedIn;
+	}
+	/**
 //	 * @param checkedIn the checkedIn to set
 //	 */
-//	public void setCheckedIn(DateTime checkedIn) {
-//		this.checkedIn = checkedIn;
-//	}
+	public void setCheckedIn(int checkedIn) {
+		this.checkedIn = checkedIn;
+	}
 
 }

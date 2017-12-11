@@ -37,7 +37,7 @@ public class DatabaseConfig {
 	   public LocalContainerEntityManagerFactoryBean  entityManagerFactory() {
 		   LocalContainerEntityManagerFactoryBean  em = new LocalContainerEntityManagerFactoryBean();
 	      em.setDataSource(dataSource());
-	      em.setPackagesToScan(new String[] { "edu.dmacc.books.books.data","edu.dmacc.books.borrower.data" });
+	      em.setPackagesToScan(new String[] { "edu.dmacc.books.books.data","edu.dmacc.books.borrower.data","edu.dmacc.books.borrowedbooks" });
 	 
 	      JpaVendorAdapter vendorAdapter = new EclipseLinkJpaVendorAdapter();
 	      em.setJpaVendorAdapter(vendorAdapter);     

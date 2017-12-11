@@ -7,6 +7,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Borrower Addition</title>
+<style type="text/css">
+    <%@include file="../mystyle.css" %>
+</style>
 </head>
 <body>
 <h2>Borrower - Add</h2>

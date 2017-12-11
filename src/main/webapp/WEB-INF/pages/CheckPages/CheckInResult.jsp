@@ -6,17 +6,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Borrowers Main Menu</title>
+<title>Check Books In</title>
 <style type="text/css">
     <%@include file="../mystyle.css" %>
 </style>
 </head>
 <body>
-<h2>Borrowers Menu</h2>
-	<ul>
-		<li><a href = "BorrowerAdd.mvc">Add a Borrower</a></li>
-		<li><a href = "BorrowerModify.mvc">Modify a Borrower</a></li>
-		<li><a href = "BorrowerDelete.mvc">Remove a Borrower</a></li>
-	</ul>
+	
+	<h1>Book Successfully Checked in!</h1>
+	
 </body>
 </html>

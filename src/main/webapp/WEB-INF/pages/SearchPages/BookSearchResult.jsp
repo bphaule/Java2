@@ -21,6 +21,7 @@ td, th {
     text-align: left;
     padding: 8px;
 }
+<%@include file="../mystyle.css" %>
 </style>
 </head>
 <body>

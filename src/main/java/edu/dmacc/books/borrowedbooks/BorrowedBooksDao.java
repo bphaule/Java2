@@ -3,8 +3,11 @@
  */
 package edu.dmacc.books.borrowedbooks;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 
 import org.springframework.stereotype.Component;
 
@@ -17,7 +20,7 @@ import edu.dmacc.books.borrower.data.Borrower;
  */
 @Component
 public class BorrowedBooksDao {
-	 @PersistenceContext EntityManager em;
+	@PersistenceContext EntityManager em;
 	public boolean NewBorrowedBook(BorrowedBooks bb)
 	{
 		try
@@ -105,4 +108,25 @@ public class BorrowedBooksDao {
 //		}
 //		return true;
 //	}
+	
+	public List<BorrowedBooks> getBorrowedBooks(){
+		
+		String q = "select u from BorrowedBooks u";
+		TypedQuery<BorrowedBooks> typedQuery = em.createQuery(q, BorrowedBooks.class);
+		List<BorrowedBooks> all = typedQuery.getResultList();
+		return all;
+		
+	}
+	
+	public void removeBorrowedBook(int borrowerID, int bookID) {
+		
+		String q = "select u from BorrowedBooks u where u.borrowerID = " + borrowerID + " and u.bookID = " + bookID;
+		TypedQuery<BorrowedBooks> typedQuery = em.createQuery(q, BorrowedBooks.class);
+		BorrowedBooks br = typedQuery.getSingleResult();
+		
+		em.getTransaction().begin();
+		em.remove(br);
+		em.getTransaction().commit();
+		
+	}
 }
